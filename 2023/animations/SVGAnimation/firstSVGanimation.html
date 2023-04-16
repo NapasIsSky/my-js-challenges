@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first SVG animation</title>
+
+    <style>
+      :root {
+        --primary-color: #2a8eac;
+        --secondary-color: #ff8976;
+      }
+
+      #ellipse-1 {
+        animation: up1 4s ease infinite;
+      }
+      #ellipse-2 {
+        animation: up2 4s ease infinite;
+      }
+      #ellipse-3 {
+        animation: up3 4s ease infinite;
+      }
+
+      @keyframes up1 {
+        0% {
+          fill: var(--secondary-color);
+          opacity: 0.6;
+          transform: translateY(10%);
+        }
+        30% {
+          fill: var(--secondary-color);
+          opacity: 0.9;
+          transform: translateY(-20%);
+        }
+        100% {
+          fill: var(--primary-color);
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes up2 {
+        10% {
+          fill: var(--secondary-color);
+          opacity: 0.6;
+          transform: translateY(10%);
+        }
+        40% {
+          fill: var(--secondary-color);
+          opacity: 0.9;
+          transform: translateY(-20%);
+        }
+        100% {
+          fill: var(--primary-color);
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes up3 {
+        20% {
+          fill: var(--secondary-color);
+          opacity: 0.6;
+          transform: translateY(10%);
+        }
+        50% {
+          fill: var(--secondary-color);
+          opacity: 0.9;
+          transform: translateY(-20%);
+        }
+        100% {
+          fill: var(--primary-color);
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; align-items: center; justify-content: center">
+      <svg width="300" height="300" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+        <g id="dot-loading">
+          <ellipse id="ellipse-1" cx="264.5" cy="539.5" rx="104.5" ry="102.5" />
+          <ellipse id="ellipse-2" cx="536.5" cy="539.5" rx="104.5" ry="102.5" />
+          <ellipse id="ellipse-3" cx="808.5" cy="539.5" rx="104.5" ry="102.5" />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
